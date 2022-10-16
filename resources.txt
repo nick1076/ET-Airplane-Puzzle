@@ -1,0 +1,8 @@
+RFID
+https://randomnerdtutorials.com/security-access-using-mfrc522-rfid-reader-with-arduino/
+
+7 Seg
+https://learn.adafruit.com/adafruit-7-segment-led-featherwings/arduino-usage
+
+SDA/SCL
+https://www.robot-electronics.co.uk/i2c-tutorial
