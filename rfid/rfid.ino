@@ -1,9 +1,12 @@
 #include <SPI.h>
 #include <MFRC522.h>
+#include <Wire.h>
  
 #define SS_PIN 10
 #define RST_PIN 9
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
+
+int outcome = 0;
  
 void setup() 
 {
@@ -12,18 +15,34 @@ void setup()
   mfrc522.PCD_Init();   // Initiate MFRC522
   Serial.println("Approximate your card to the reader...");
   Serial.println();
+  Wire.begin(); 
 
 }
 void loop() 
 {
+  bool continueOn = true;
+  int prevOutcome = outcome;
   // Look for new cards
-  if ( ! mfrc522.PICC_IsNewCardPresent()) 
-  {
-    return;
-  }
   // Select one of the cards
+  // Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle.
+  if ( ! mfrc522.PICC_IsNewCardPresent()) {
+    Serial.println("Piece no longer in place!");
+    outcome = 0;
+    continueOn = false;
+  }
   if ( ! mfrc522.PICC_ReadCardSerial()) 
   {
+    continueOn = false;
+  }
+
+  if (continueOn == false){
+    if (prevOutcome == 1 && outcome == 0){
+      return;
+    }
+    delay(300);
+    Wire.beginTransmission(1); // transmit to device #9
+    Wire.write(outcome);              // sends x 
+    Wire.endTransmission(true);    // stop transmitting
     return;
   }
   //Show UID on serial monitor
@@ -42,13 +61,19 @@ void loop()
   content.toUpperCase();
   if (content.substring(1) == "93 0C 78 92") //change here the UID of the card/cards that you want to give access
   {
-    Serial.println("Authorized access");
+    Serial.println("Piece is in place!");
+    outcome = 1;
     Serial.println();
-    delay(3000);
+    delay(300);
   }
  
  else   {
-    Serial.println(" Access denied");
-    delay(3000);
+    Serial.println("Wrong piece is in place!");
+    outcome = 0;
+    delay(300);
   }
+  
+   Wire.beginTransmission(1); // transmit to device #9
+   Wire.write(outcome);              // sends x 
+   Wire.endTransmission(true);    // stop transmitting
 } 
