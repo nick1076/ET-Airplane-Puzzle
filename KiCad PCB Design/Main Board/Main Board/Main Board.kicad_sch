@@ -727,7 +727,7 @@
     (property "Value" "LED" (id 1) (at 173.6725 87.63 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "LED_SMD:LED_2010_5025Metric_Pad1.52x2.65mm_HandSolder" (id 2) (at 172.085 92.71 0)
+    (property "Footprint" "fab:LED_1206" (id 2) (at 172.085 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 172.085 92.71 0)
@@ -746,7 +746,7 @@
     (property "Value" "Conn_01x10_Male" (id 1) (at 177.8 69.8499 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x10_P1.00mm_Vertical_SMD_Pin1Left" (id 2) (at 175.895 69.85 0)
+    (property "Footprint" "fab:PinHeader_1x10_P2.54mm_Horizontal_SMD" (id 2) (at 175.895 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 175.895 69.85 0)
@@ -773,7 +773,7 @@
     (property "Value" "Conn_01x10_Male" (id 1) (at 143.5099 59.69 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x10_P1.00mm_Vertical_SMD_Pin1Left" (id 2) (at 143.51 61.595 0)
+    (property "Footprint" "fab:PinHeader_1x10_P2.54mm_Horizontal_SMD" (id 2) (at 143.51 61.595 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 143.51 61.595 0)
@@ -798,7 +798,7 @@
     (property "Value" "R" (id 1) (at 175.895 98.425 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 177.292 98.425 90)
+    (property "Footprint" "fab:R_1206" (id 2) (at 177.292 98.425 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 179.07 98.425 0)
@@ -817,7 +817,7 @@
     (property "Value" "Conn_01x10_Male" (id 1) (at 144.145 122.5551 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x10_P1.00mm_Vertical_SMD_Pin1Left" (id 2) (at 146.05 122.555 0)
+    (property "Footprint" "fab:PinHeader_1x10_P2.54mm_Horizontal_SMD" (id 2) (at 146.05 122.555 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 146.05 122.555 0)
@@ -844,7 +844,7 @@
     (property "Value" "Conn_01x10_Male" (id 1) (at 176.53 44.4499 0)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Footprint" "Connector_PinHeader_1.00mm:PinHeader_1x10_P1.00mm_Vertical_SMD_Pin1Left" (id 2) (at 174.625 44.45 0)
+    (property "Footprint" "fab:PinHeader_1x10_P2.54mm_Horizontal_SMD" (id 2) (at 174.625 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 174.625 44.45 0)
@@ -893,22 +893,22 @@
 
   (symbol_instances
     (path "/0e6b333e-8992-4c6f-aae2-7a8d485febe6"
-      (reference "D1") (unit 1) (value "LED") (footprint "LED_SMD:LED_2010_5025Metric_Pad1.52x2.65mm_HandSolder")
+      (reference "D1") (unit 1) (value "LED") (footprint "fab:LED_1206")
     )
     (path "/4aaa746c-7db2-4c79-9e3e-5966ae0735f3"
-      (reference "J1") (unit 1) (value "Conn_01x10_Male") (footprint "Connector_PinHeader_1.00mm:PinHeader_1x10_P1.00mm_Vertical_SMD_Pin1Left")
+      (reference "J1") (unit 1) (value "Conn_01x10_Male") (footprint "fab:PinHeader_1x10_P2.54mm_Horizontal_SMD")
     )
     (path "/ada35977-508e-4af9-8821-50f08adb72e4"
-      (reference "J2") (unit 1) (value "Conn_01x10_Male") (footprint "Connector_PinHeader_1.00mm:PinHeader_1x10_P1.00mm_Vertical_SMD_Pin1Left")
+      (reference "J2") (unit 1) (value "Conn_01x10_Male") (footprint "fab:PinHeader_1x10_P2.54mm_Horizontal_SMD")
     )
     (path "/f0c34404-6620-4928-a016-4f27a184298f"
-      (reference "J3") (unit 1) (value "Conn_01x10_Male") (footprint "Connector_PinHeader_1.00mm:PinHeader_1x10_P1.00mm_Vertical_SMD_Pin1Left")
+      (reference "J3") (unit 1) (value "Conn_01x10_Male") (footprint "fab:PinHeader_1x10_P2.54mm_Horizontal_SMD")
     )
     (path "/11d2e56c-5b75-4dbf-9572-c8a39ea65bbc"
-      (reference "J4") (unit 1) (value "Conn_01x10_Male") (footprint "Connector_PinHeader_1.00mm:PinHeader_1x10_P1.00mm_Vertical_SMD_Pin1Left")
+      (reference "J4") (unit 1) (value "Conn_01x10_Male") (footprint "fab:PinHeader_1x10_P2.54mm_Horizontal_SMD")
     )
     (path "/8ab1171d-54a1-4662-bca2-d8755f4053e1"
-      (reference "R3") (unit 1) (value "R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R3") (unit 1) (value "R") (footprint "fab:R_1206")
     )
     (path "/f33ec0db-ef0f-4576-8054-2833161a8f30"
       (reference "U1") (unit 1) (value "ATtiny412-SS") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
