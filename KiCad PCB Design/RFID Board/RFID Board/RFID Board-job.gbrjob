@@ -5,17 +5,17 @@
       "Application": "Pcbnew",
       "Version": "(6.0.2)"
     },
-    "CreationDate": "2022-11-08T15:40:53-05:00"
+    "CreationDate": "2022-11-08T16:03:38-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "Main Board",
-      "GUID": "4d61696e-2042-46f6-9172-642e6b696361",
+      "Name": "RFID Board",
+      "GUID": "52464944-2042-46f6-9172-642e6b696361",
       "Revision": "rev?"
     },
     "Size": {
-      "X": 52.17,
-      "Y": 33.12
+      "X": 35.66,
+      "Y": 39.47
     },
     "LayerNumber": 2,
     "BoardThickness": 1.6,
@@ -27,52 +27,17 @@
       "PadToPad": 0.2,
       "PadToTrack": 0.2,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 0.5
+      "MinLineWidth": 0.4
     }
   ],
   "FilesAttributes": [
     {
-      "Path": "Main Board-F_Cu.gbr",
+      "Path": "RFID Board-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Main Board-B_Cu.gbr",
-      "FileFunction": "Copper,L2,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Main Board-F_Paste.gbr",
-      "FileFunction": "SolderPaste,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Main Board-B_Paste.gbr",
-      "FileFunction": "SolderPaste,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Main Board-F_Silkscreen.gbr",
-      "FileFunction": "Legend,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Main Board-B_Silkscreen.gbr",
-      "FileFunction": "Legend,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Main Board-F_Mask.gbr",
-      "FileFunction": "SolderMask,Top",
-      "FilePolarity": "Negative"
-    },
-    {
-      "Path": "Main Board-B_Mask.gbr",
-      "FileFunction": "SolderMask,Bot",
-      "FilePolarity": "Negative"
-    },
-    {
-      "Path": "Main Board-Edge_Cuts.gbr",
+      "Path": "RFID Board-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
