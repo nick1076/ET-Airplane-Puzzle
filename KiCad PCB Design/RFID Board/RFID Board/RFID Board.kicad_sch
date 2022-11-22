@@ -789,6 +789,11 @@
     (uuid fec1f993-39d6-4f47-9359-dffb3eefae1a)
   )
 
+  (text "0 Ohm (Both)\n" (at 106.045 64.77 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid fd4228d1-1087-424a-8bd5-316eba4decb4)
+  )
+
   (symbol (lib_id "fab:Conn_PinHeader_1x02_P2.54mm_Horizontal_SMD") (at 142.24 41.91 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 3325d288-789e-4a2c-8950-966ba4b94c1d)

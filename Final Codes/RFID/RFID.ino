@@ -1,19 +1,30 @@
+
+//DO NOT MODIFY
 #include <SPI.h>
 #include <MFRC522.h>
 #include <Wire.h>
  
+//DO NOT MODIFY
 #define SS_PIN 10
 #define RST_PIN 9
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
 
+//DO NOT MODIFY
 int outcome = 0;
+
+//Multiply RFID device number (starting at 0) and add to the numbers already here
+int pieceOutOfPlaceMessage = 0;
+int pieceInPlaceMessage = 1;
+
+//String for the ID of the correct piece for this RFID device
+String pieceUUID = "93 0C 78 92";
  
 void setup() 
 {
-  Serial.begin(9600);   // Initiate a serial communication
-  SPI.begin();      // Initiate  SPI bus
-  mfrc522.PCD_Init();   // Initiate MFRC522
-  Serial.println("Approximate your card to the reader...");
+  Serial.begin(9600); //For Debug Purposes
+  SPI.begin();
+  mfrc522.PCD_Init(); //Initiate MFRC522
+  Serial.println("Approximate your card to the reader..."); //Debug Messages
   Serial.println();
   Wire.begin(); 
 
@@ -40,9 +51,16 @@ void loop()
       return;
     }
     delay(300);
-    Wire.beginTransmission(1); // transmit to device #9
-    Wire.write(outcome);              // sends x 
-    Wire.endTransmission(true);    // stop transmitting
+    Wire.beginTransmission(1);
+    
+    if (outcome == 0){
+      Wire.write(pieceOutOfPlaceMessage);
+    }
+    else if (outcome == 1){
+      Wire.write(pieceInPlaceMessage);
+    }
+    
+    Wire.endTransmission(true);
     return;
   }
   //Show UID on serial monitor
@@ -59,7 +77,7 @@ void loop()
   Serial.println();
   Serial.print("Message : ");
   content.toUpperCase();
-  if (content.substring(1) == "93 0C 78 92") //change here the UID of the card/cards that you want to give access
+  if (content.substring(1) == pieceUUID) //change here the UID of the card/cards that you want to give access
   {
     Serial.println("Piece is in place!");
     outcome = 1;
@@ -73,7 +91,12 @@ void loop()
     delay(300);
   }
   
-   Wire.beginTransmission(1); // transmit to device #9
-   Wire.write(outcome);              // sends x 
-   Wire.endTransmission(true);    // stop transmitting
+   Wire.beginTransmission(1); //Begin transmission to main board
+   if (outcome == 0){
+    Wire.write(pieceOutOfPlaceMessage);
+   }
+   else if (outcome == 1){
+    Wire.write(pieceInPlaceMessage);
+   }
+   Wire.endTransmission(true);
 } 
