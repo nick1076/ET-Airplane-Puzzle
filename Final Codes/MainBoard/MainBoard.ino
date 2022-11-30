@@ -12,11 +12,23 @@ bool piece4 = false;
 void setup() {
   Wire.begin(1); // Start the I2C Bus as Master
   Wire.onReceive(receiveEvent); //Initialize Recieve Event
+  pinMode(4, OUTPUT);
+  blinkL(3, 4, 200);
+}
+
+void blinkL(int iter, int led, int timeL){
+  for (int i = 0; i < iter; i++){
+    digitalWrite(led, HIGH);
+    delay(timeL);
+    digitalWrite(led, LOW);
+    delay(timeL);
+  }
 }
 
 void loop() {
   //If true, a new set of bytes have been read
   if (x != y){
+    blinkL(2, 4, 100);
     if (x >= 0 && x < 10){
       //RFID 1 is trying to communicate
       if (x == 0){
