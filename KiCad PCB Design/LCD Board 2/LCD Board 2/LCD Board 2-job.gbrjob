@@ -1,90 +1,90 @@
 {
-"DesignRules": [
-{
-"Layers": "Outer",
-"MinLineWidth": 0.5,
-"PadToPad": 0.2,
-"PadToTrack": 0.2,
-"TrackToTrack": 0.2
-}
-],
-"FilesAttributes": [
-{
-"FileFunction": "Copper,L1,Top",
-"FilePolarity": "Positive",
-"Path": "LCD Board 2-F_Cu.gbr"
-},
-{
-"FileFunction": "Profile",
-"FilePolarity": "Positive",
-"Path": "LCD Board 2-Edge_Cuts.gbr"
-}
-],
-"GeneralSpecs": {
-"BoardThickness": 1.6,
-"Finish": "None",
-"LayerNumber": 2,
-"ProjectId": {
-"GUID": "4c434420-426f-4617-9264-2050726f6a65",
-"Name": "LCD Board Project",
-"Revision": "rev?"
-},
-"Size": {
-"X": 28.04,
-"Y": 28.04
-}
-},
-"Header": {
-"CreationDate": "2022-11-29T10:10:07-05:00",
-"GenerationSoftware": {
-"Application": "Pcbnew",
-"Vendor": "KiCad",
-"Version": "(6.0.2)"
-}
-},
-"MaterialStackup": [
-{
-"Name": "Top Silk Screen",
-"Type": "Legend"
-},
-{
-"Name": "Top Solder Paste",
-"Type": "SolderPaste"
-},
-{
-"Name": "Top Solder Mask",
-"Thickness": 0.01,
-"Type": "SolderMask"
-},
-{
-"Name": "F.Cu",
-"Thickness": 0.035,
-"Type": "Copper"
-},
-{
-"Material": "FR4",
-"Name": "F.Cu/B.Cu",
-"Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)",
-"Thickness": 1.51,
-"Type": "Dielectric"
-},
-{
-"Name": "B.Cu",
-"Thickness": 0.035,
-"Type": "Copper"
-},
-{
-"Name": "Bottom Solder Mask",
-"Thickness": 0.01,
-"Type": "SolderMask"
-},
-{
-"Name": "Bottom Solder Paste",
-"Type": "SolderPaste"
-},
-{
-"Name": "Bottom Silk Screen",
-"Type": "Legend"
-}
-]
+  "Header": {
+    "GenerationSoftware": {
+      "Vendor": "KiCad",
+      "Application": "Pcbnew",
+      "Version": "(6.0.2)"
+    },
+    "CreationDate": "2022-12-01T07:39:21-05:00"
+  },
+  "GeneralSpecs": {
+    "ProjectId": {
+      "Name": "LCD Board 2",
+      "GUID": "4c434420-426f-4617-9264-20322e6b6963",
+      "Revision": "rev?"
+    },
+    "Size": {
+      "X": 30.58,
+      "Y": 31.85
+    },
+    "LayerNumber": 2,
+    "BoardThickness": 1.6,
+    "Finish": "None"
+  },
+  "DesignRules": [
+    {
+      "Layers": "Outer",
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.5
+    }
+  ],
+  "FilesAttributes": [
+    {
+      "Path": "LCD Board 2-F_Cu.gbr",
+      "FileFunction": "Copper,L1,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "LCD Board 2-Edge_Cuts.gbr",
+      "FileFunction": "Profile",
+      "FilePolarity": "Positive"
+    }
+  ],
+  "MaterialStackup": [
+    {
+      "Type": "Legend",
+      "Name": "Top Silk Screen"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Top Solder Paste"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.01,
+      "Name": "Top Solder Mask"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "F.Cu"
+    },
+    {
+      "Type": "Dielectric",
+      "Thickness": 1.51,
+      "Material": "FR4",
+      "Name": "F.Cu/B.Cu",
+      "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
+    },
+    {
+      "Type": "Copper",
+      "Thickness": 0.035,
+      "Name": "B.Cu"
+    },
+    {
+      "Type": "SolderMask",
+      "Thickness": 0.01,
+      "Name": "Bottom Solder Mask"
+    },
+    {
+      "Type": "SolderPaste",
+      "Name": "Bottom Solder Paste"
+    },
+    {
+      "Type": "Legend",
+      "Name": "Bottom Silk Screen"
+    }
+  ]
 }

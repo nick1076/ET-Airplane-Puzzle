@@ -62,11 +62,11 @@
       35,
       36
     ],
-    "visible_layers": "ffdd020_7fffffff",
+    "visible_layers": "7fdffdf_80000001",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "LCD Board 2.kicad_prl",
+    "filename": "Comms.kicad_prl",
     "version": 3
   },
   "project": {
