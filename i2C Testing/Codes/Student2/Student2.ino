@@ -4,13 +4,13 @@ int x = 0;
 
 void setup()
 {
-  pinMode(13, OUTPUT);
+  pinMode(10, OUTPUT);
   
   Wire.begin(2);
   Wire.onReceive(readData);
   
-  //PORTB_PIN0CTRL |= PORT_PULLUPEN_bm;
-  //PORTB_PIN1CTRL |= PORT_PULLUPEN_bm;
+  PORTB_PIN0CTRL |= PORT_PULLUPEN_bm;
+  PORTB_PIN1CTRL |= PORT_PULLUPEN_bm;
 }
 
 void loop()
