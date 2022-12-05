@@ -36,7 +36,6 @@ void PingStudentOne()
   Wire.beginTransmission(1);
   Wire.write(1);
   Wire.endTransmission();
-  delay(1000);
 }
 
 void PingStudentTwo()
@@ -44,5 +43,4 @@ void PingStudentTwo()
   Wire.beginTransmission(2);
   Wire.write(1);
   Wire.endTransmission();
-  delay(1000);
 }
