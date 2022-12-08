@@ -11,7 +11,6 @@ void setup() {
 
   //Debug Light Definition & Enabling
   pinMode(1, OUTPUT);
-  digitalWrite(1, HIGH);
 
   //Contact Definitions
   pinMode(10, INPUT_PULLUP);
@@ -32,6 +31,13 @@ void loop() {
   else{
     //Not all pieces are in place
     DisplayCode(0, 0, 0, 0);
+  }
+
+  if (digitalRead(10) == LOW){
+    digitalWrite(1, HIGH);
+  }
+  else{
+    digitalWrite(1, LOW);
   }
 }
 
