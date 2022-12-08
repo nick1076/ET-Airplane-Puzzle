@@ -26,18 +26,15 @@ void loop() {
   //Check if all pieces are in place (All Contacts read LOW)
   if (digitalRead(10) == LOW && digitalRead(9) == LOW && digitalRead(8) == LOW && digitalRead(0) == LOW){
     //All pieces are in place!
-    DisplayCode(1, 2, 3, 4);
-  }
-  else{
-    //Not all pieces are in place
-    DisplayCode(0, 0, 0, 0);
-  }
-
-  if (digitalRead(10) == LOW){
     digitalWrite(1, HIGH);
+    DisplayCode(1, 2, 3, 4);
+    matrix.setBrightness(15);
   }
   else{
+    //Not all pieces are in place  
     digitalWrite(1, LOW);
+    matrix.print(0, DEC);
+    matrix.writeDisplay();
   }
 }
 
