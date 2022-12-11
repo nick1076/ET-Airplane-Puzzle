@@ -7,6 +7,9 @@
 //Define 7 Segment #1
 Adafruit_7segment matrix = Adafruit_7segment();
 
+//Define 7 Segment #2
+Adafruit_7segment matrix2 = Adafruit_7segment();
+
 void setup() {
 
   //Debug Light Definition & Enabling
@@ -20,6 +23,9 @@ void setup() {
 
   //Initialize 7 Segment #1
   matrix.begin(0x70);
+
+  //Initialize 7 Segment #2
+  matrix2.begin(0x71);
 }
 
 void loop() {
@@ -27,23 +33,39 @@ void loop() {
   if (digitalRead(10) == LOW && digitalRead(9) == LOW && digitalRead(8) == LOW && digitalRead(0) == LOW){
     //All pieces are in place!
     digitalWrite(1, HIGH);
-    DisplayCode(1, 2, 3, 4);
-    matrix.setBrightness(15);
+    
+    DisplayCode1(1, 2, 3, 4);
+    
+    matrix2.println("ABCD");
+    matrix2.writeDisplay();
   }
   else{
     //Not all pieces are in place  
     digitalWrite(1, LOW);
-    matrix.print(0, DEC);
+    
+    matrix.print("    ");
     matrix.writeDisplay();
+    
+    matrix2.print("    ");
+    matrix2.writeDisplay();
   }
 }
 
 //Function to control code display
-void DisplayCode(int num1, int num2, int num3, int num4){
+void DisplayCode1(int num1, int num2, int num3, int num4){
   matrix.writeDigitNum(0, num1, false);
   matrix.writeDigitNum(1, num2, false);
   matrix.drawColon(false);
   matrix.writeDigitNum(3, num3, false);
   matrix.writeDigitNum(4, num4, false);
   matrix.writeDisplay();
+}
+
+void DisplayCode2(int num1, int num2, int num3, int num4){
+  matrix2.writeDigitNum(0, num1, false);
+  matrix2.writeDigitNum(1, num2, false);
+  matrix2.drawColon(false);
+  matrix2.writeDigitNum(3, num3, false);
+  matrix2.writeDigitNum(4, num4, false);
+  matrix2.writeDisplay();
 }
