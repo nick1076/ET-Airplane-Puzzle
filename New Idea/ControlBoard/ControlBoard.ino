@@ -34,9 +34,9 @@ void loop() {
     //All pieces are in place!
     digitalWrite(1, HIGH);
     
-    DisplayCode1(1, 2, 3, 4);
+    DisplayCode1(3, 2, 8, 7);
     
-    matrix2.println("ABCD");
+    matrix2.println("F282");
     matrix2.writeDisplay();
   }
   else{
