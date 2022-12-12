@@ -36,7 +36,7 @@ void loop() {
     
     DisplayCode1(3, 2, 8, 7);
     
-    matrix2.println("F282");
+    matrix2.println("FUEL");
     matrix2.writeDisplay();
   }
   else{
